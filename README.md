@@ -31,13 +31,15 @@ The dataset is available for download from multiple sources:
 ## Example Usage
 Here’s a simple example of how to load and explore the dataset:
 
-```import pandas as pd
+```
+import pandas as pd
 
 # Load the dataset
 df = pd.read_csv('path-to-dataset.csv')
 
 # Display the first few rows
-print(df.head())```
+print(df.head())
+```
 
 ## Contributing
 We welcome contributions from the community! Feel free to submit issues or pull requests to help improve the dataset and its applications.
