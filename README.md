@@ -1,4 +1,4 @@
-# M$^{3}$-20M: Multi-Modal Molecular Dataset
+# M<sup>3</sup>-20M: Multi-Modal Molecular Dataset
 
 Welcome to the official repository for M$^3$-20M, the first large-scale Multi-Modal Molecular dataset, containing over 20 million molecules! 🎉
 
