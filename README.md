@@ -1,9 +1,9 @@
 # M<sup>3</sup>-20M: Multi-Modal Molecular Dataset
 
-Welcome to the official repository for M$^3$-20M, the first large-scale Multi-Modal Molecular dataset, containing over 20 million molecules! 🎉
+Welcome to the official repository for M<sup>3</sup>-20M, the first large-scale Multi-Modal Molecular dataset, containing over 20 million molecules! 🎉
 
 ## Overview
-M$^{3}$-20M (Multi-Modal Molecular dataset) is designed to support AI-driven drug design and discovery. It provides an unprecedented scale that highly benefits the training or fine-tuning of large models for superior performance in drug design and discovery tasks.
+M<sup>3</sup>-20M (Multi-Modal Molecular dataset) is designed to support AI-driven drug design and discovery. It provides an unprecedented scale that highly benefits the training or fine-tuning of large models for superior performance in drug design and discovery tasks.
 
 ## Features
 -**Scale**: Contains over 20 million molecules, 71 times more than the largest existing dataset.
@@ -15,7 +15,7 @@ M$^{3}$-20M (Multi-Modal Molecular dataset) is designed to support AI-driven dru
 -Text descriptions
 -**Diverse Applications**: Supports various downstream tasks such as molecule generation, molecular property prediction, lead optimization, virtual screening, pharmacokinetics modeling, and drug-target interaction prediction.
 Dataset Details
-M$^3$-20M integrates data from multiple sources to provide a comprehensive view of each molecule. Here’s what you can find in the dataset:
+M<sup>3</sup>-20M integrates data from multiple sources to provide a comprehensive view of each molecule. Here’s what you can find in the dataset:
 
 
 ## Download Links
@@ -53,4 +53,4 @@ This dataset is a collaborative effort by researchers from Tongji University and
 ## Contact
 For any questions or inquiries, please reach out to gsy9901224@tongji.edu.cn.
 
-Enjoy using M$^3$-20M and happy researching! 🚀🔬
+Enjoy using M<sup>3</sup>-20M and happy researching! 🚀🔬
