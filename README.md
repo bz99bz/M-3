@@ -22,7 +22,7 @@ M<sup>3</sup>-20M integrates data from multiple sources to provide a comprehensi
 The dataset is available for download from multiple sources:
 
 - **Google Drive**: [Download Link](https://drive.google.com/drive/folders/1ai_HfcWfWoRdsfsDscfR1Dlg2OGEemWi?usp=sharing)
-- **Baidu Cloud**:  [Download Link] (链接：https://pan.baidu.com/s/1kNL32Rj3r9PgdvMWQSDVhA?pwd=ADMS 提取码：ADMS)
+- **Baidu Cloud**:  [Download Link] (https://pan.baidu.com/s/1kNL32Rj3r9PgdvMWQSDVhA?pwd=ADMS) (提取码：ADMS)
 - **Hugging Face**:  [Download Link](https://huggingface.co/datasets/Alex99Gsy/M-3_Multi-Modal-Molecule)
 
 
