@@ -41,7 +41,7 @@ df = pd.read_csv('path-to-dataset.csv')
 print(df.head())
 ```
 
-## Contributing
+## Contribution
 We welcome contributions from the community! Feel free to submit issues or pull requests to help improve the dataset and its applications.
 
 ## License
