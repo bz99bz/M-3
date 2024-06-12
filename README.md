@@ -48,8 +48,7 @@ We welcome contributions from the community! Feel free to submit issues or pull 
 This project is licensed under the MIT License - see the LICENSE file for details.
 
 ## Acknowledgements
-This dataset is a collaborative effort by researchers from Tongji University and Fudan University. We thank everyone involved for their contributions and support.
-
+This dataset is a collaborative effort by researchers from Tongji University and Fudan University. We thank Lexuan Wang, Chang Jin, Jinxian Wang, Han Peng, Huayang Shi, Wengen Li, Jihong Guan, and Shuigeng Zhou for their contributions and support.
 ## Contact
 For any questions or inquiries, please reach out to gsy9901224@tongji.edu.cn.
 
