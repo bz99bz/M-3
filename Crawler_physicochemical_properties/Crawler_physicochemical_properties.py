@@ -2,6 +2,35 @@ import pandas as pd
 import time
 import requests
 
+# Fetch physical and chemical properties Property_Name
+# Property_Name
+Property_Name = ['Molecular Weight',
+                'XLogP3',
+                'Hydrogen Bond Donor Count',
+                'Hydrogen Bond Acceptor Count',
+                'Rotatable Bond Count',
+                'Exact Mass',
+                'Monoisotopic Mass',
+                'Topological Polar Surface Area',
+                'Heavy Atom Count',
+                'Formal Charge',
+                'Complexity',
+                'Isotope Atom Count',
+                'Defined Atom Stereocenter Count',
+                'Undefined Atom Stereocenter Count',
+                'Defined Bond Stereocenter Count',
+                'Undefined Bond Stereocenter Count',
+                'Covalently-Bonded Unit Count',
+                'Compound Is Canonicalized',
+                'Physical Description', 
+                'Color/Form', 
+                'Odor', 
+                'Boiling Point',
+                'Melting Point',
+                'Flash Point', 
+                'Solubility',
+                'Density']
+
 def get_Pubchem(url):
     '''
     Retrieve compound data from PubChem.
@@ -12,7 +41,7 @@ def get_Pubchem(url):
     Output:
         JSON data returned by PubChem
     '''
-    
+
     # The API address to be used
     # url = 'https://pubchem.ncbi.nlm.nih.gov/rest/pug_view/data/compound/2244/JSON/?heading=Names+and+Identifiers'
 
@@ -30,7 +59,7 @@ def get_Pubchem(url):
         print(f"An exception occurred: {e}")
         return -1
 
-# Parse the name from the response
+# Parse name from response
 def get_name_value(response, name):
     '''
     Input:
@@ -62,16 +91,7 @@ def get_name_value2(response, name):
     '''
     Input:
         response: The response object
-        name: Attributes like Canonical SMILES, Molecular Formula, CAS, Molecular Weight, and others:
-            "CAS", "IUPAC Name", "InChI", "InChIKey", "Canonical SMILES",
-            "Related CAS", "Molecular Weight", "Molecular Formula", 
-            "Exact Mass", "Monoisotopic Mass", "Atomic Mass", "Physical Description", 
-            "Color/Form", "Odor", "Odor Threshold", "Threshold Limit Values (TLV)", 
-            "Density", "Melting Point", "Boiling Point", "Vapor Pressure", "Flash Point", 
-            "Lower Explosive Limit (LEL)", "Upper Explosive Limit (UEL)", 
-            "Hazard Classes and Categories", "Toxicity Data", "NIOSH Toxicity Data", 
-            "Non-Human Toxicity Values", "Ecotoxicity Values", "Ecotoxicity Excerpts", 
-            "Immediately Dangerous to Life or Health (IDLH)", "UN Number"
+        name: Attributes like Canonical SMILES, Molecular Formula, CAS, Molecular Weight, and others
     Output:
         A list of values corresponding to the attribute.
     '''
@@ -104,21 +124,22 @@ def get_name_value2(response, name):
         return []
 
 # Read the CSV file
-csv_file = "your_csv_file.csv"
+csv_file = 'your_csv_file.csv'
 print(csv_file)
 df = pd.read_csv(csv_file)
 
-# Extract the values of the "CID" column and convert them to a list
+# Get the values from the "CID" column and convert them to a list
 cid_list = df['CID'].tolist()
 
-# Batch fetch data for attributes like name, IUPAC Name, InChI, InChI Key, SMILES, Molecular Formula, and CAS based on CID
+# Fetch data in batches for names, IUPAC Name, InChI, InChI Key, SMILES, Molecular Formula, CAS, and other properties based on CIDs
+  
 df = pd.DataFrame()
 
 count = 0
 for cid in cid_list[:]:
     if cid != 0:
         # API address for Names and Identifiers
-        url = f'https://pubchem.ncbi.nlm.nih.gov/rest/pug_view/data/compound/{cid}/JSON/?heading=Names+and+Identifiers'
+        url = f'https://pubchem.ncbi.nlm.nih.gov/rest/pug_view/data/compound/{cid}/JSON/'
 
         response = get_Pubchem(url)
         if response != -1:
@@ -126,17 +147,16 @@ for cid in cid_list[:]:
             try:
                 cid_paras = response.json()['Record']['RecordNumber']
                 compound_name = response.json()['Record']['RecordTitle']
-
-                # Parse attributes like 'IUPAC Name', 'InChI', 'InChI Key', etc.
+      
                 d = {}
                 d['cid'] = cid
                 d['compound_name'] = compound_name
                 d['cid_paras'] = cid_paras
 
-                all_name = ['IUPAC Name', 'InChI', 'InChI Key', 'Canonical SMILES', 'Molecular Formula', 'CAS']
-                for name in all_name:
+                # Parse property names
+                for name in Property_Name:
                     Value = get_name_value(response=response, name=name)
-                    d[name.replace(' ', '_')] = Value
+                    d[name.replace(' ', '_').replace('-', '_')] = Value
 
                 df_tmp = pd.DataFrame([d])
                 df = pd.concat([df, df_tmp])
@@ -146,29 +166,18 @@ for cid in cid_list[:]:
                 print(f"KeyError occurred: {e}. Skipping.")
             except requests.exceptions.RequestException as e:
                 print(f"An exception occurred: {e}")
-        else:
-            d = {}
-            d['cid'] = cid
-            d['compound_name'] = 'None'
-            d['cid_paras'] = 'None'
+    else:
+        d = {}
 
-            all_name = ['IUPAC Name', 'InChI', 'InChI Key', 'Canonical SMILES', 'Molecular Formula', 'CAS']
-            for name in all_name:
-                d[name.replace(' ', '_')] = 'None'
-
-            df_tmp = pd.DataFrame([d])
-            df = pd.concat([df, df_tmp])
-
-        # Pause for 0.5 seconds
-        time.sleep(0.5)
-        count += 1
-        if count % 10 == 0:
-            time.sleep(2)
+    # Pause for 0.5 seconds
+    time.sleep(0.5)
+    count += 1
+    if count % 10 == 0:
+        time.sleep(2)
 
 df = df.reset_index(drop=True)
 
 # Write the DataFrame to a CSV file
 output_file = 'your_output_file.csv'
 df.to_csv(output_file, index=False)
-
 print("DataFrame successfully written to CSV file.")
