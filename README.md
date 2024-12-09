@@ -58,6 +58,8 @@ We welcome contributions from the community! Feel free to submit issues or pull 
 This project is licensed under the MIT License - see the LICENSE file for details.
 
 ## Acknowledgements
+We gratefully acknowledge the use of data from the PubChem, ZINC, and QM9 databases in this study. The SMILES data utilized in our work were sourced from these essential resources, which provide invaluable chemical information. We appreciate their efforts in compiling and maintaining comprehensive datasets. If our dataset proves helpful in your research endeavors, please remember to cite PubChem, ZINC, and QM9 accordingly. 
+
 This dataset is a collaborative effort by researchers from Tongji University and Fudan University. We thank Siyuan Guo, Lexuan Wang, Chang Jin, Jinxian Wang, Han Peng, Huayang Shi, Wengen Li, Jihong Guan, and Shuigeng Zhou for their contributions and support.
 ## Contact
 For any questions or inquiries, please reach out to gsy9901224@tongji.edu.cn.
