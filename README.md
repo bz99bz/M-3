@@ -7,7 +7,7 @@ The dataset is available for download from multiple sources:
 
 - **Google Drive**: [Download Link](https://drive.google.com/drive/folders/1ai_HfcWfWoRdsfsDscfR1Dlg2OGEemWi?usp=sharing)
 - **Baidu Cloud**:  [Download Link](https://pan.baidu.com/s/1cJQX3w8ZLllMiTnwtTpavw?pwd=ADMS) password：ADMS
-  ![Baidu Cloud QR code](baidu.png)
+  ![Baidu Cloud QR code](Baidu.png)
 - **Hugging Face**:  [Download Link](https://huggingface.co/datasets/Alex99Gsy/M-3_Multi-Modal-Molecule)
   
 ## Overview
