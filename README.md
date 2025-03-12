@@ -6,7 +6,7 @@ Welcome to the official repository for M<sup>3</sup>-20M, the first large-scale 
 The dataset is available for download from multiple sources:
 
 - **Google Drive**: [Download Link](https://drive.google.com/drive/folders/1ai_HfcWfWoRdsfsDscfR1Dlg2OGEemWi?usp=sharing)
-- **Baidu Cloud**:  [Download Link](https://pan.baidu.com/s/1lENhHeXej3NjDGJUAC603w?pwd=ADMS) password：ADMS
+- **Baidu Cloud**:  [Download Link](https://pan.baidu.com/s/1cJQX3w8ZLllMiTnwtTpavw?pwd=ADMS) password：ADMS
 - **Hugging Face**:  [Download Link](https://huggingface.co/datasets/Alex99Gsy/M-3_Multi-Modal-Molecule)
   
 ## Overview
