@@ -1,6 +1,7 @@
 # M<sup>3</sup>-20M: Multi-Modal Molecular Dataset
 
 Welcome to the official repository for M<sup>3</sup>-20M, the first large-scale Multi-Modal Molecular dataset, containing over 20 million molecules! 🎉
+If our dataset is useful for your work, please cite our paper or give our GitHub project a star. Your support is very helpful to our work!
 
 ## Download Links
 The dataset is available for download from multiple sources:
@@ -64,3 +65,21 @@ This dataset is a collaborative effort by researchers from Tongji University and
 For any questions or inquiries, please reach out to gsy9901224@tongji.edu.cn.
 
 Enjoy using M<sup>3</sup>-20M and happy researching! 🚀🔬
+
+## Citing Our Work
+If you use the M<sup>3</sup>-20M dataset in your research, please cite our paper:
+<details>
+<summary>BibTeX Citation</summary>
+
+```bibtex
+
+@article{doi:10.1142/S0219720025500064,
+author = {Guo, Siyuan and Wang, Lexuan and Jin, Chang and Wang, Jinxian and Peng, Han and Shi, Huayang and Li, Wengen and Guan, Jihong and Zhou, Shuigeng},
+title = {M3-20M: A large-scale multi-modal molecule dataset for AI-driven drug design and discovery},
+journal = {Journal of Bioinformatics and Computational Biology},
+volume = {23},
+number = {02},
+pages = {2550006},
+year = {2025},
+doi = {10.1142/S0219720025500064},
+    note ={PMID: 40494666}}
